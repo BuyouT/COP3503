@@ -1,0 +1,42 @@
+#include "BST.h"
+#include <iostream>
+
+using namespace std;
+
+int main () {
+	BST * bst;	
+	int opt = -1;
+	int input;
+	cout << "1. insert \n 2. print in order \n 3. find \n 4. print from value \n";	
+	while (opt != 0) {
+		cin >> opt;
+ 		if (opt == 1) {
+			cout << "insert: " << flush;
+			cin >> input;
+			bst ->insert(input);
+		}
+		
+		else if (opt == 2) {
+			bst -> print_inorder();
+		}
+
+		else if (opt == 3) {
+			/*cout << "Find: " << flush;
+			cin << input;
+			if (BST.find(input) == true) {
+				cout << "number found" << endl;
+			}	
+			
+			else {
+				cout << "number not found" << endl;
+			}*/
+		}
+
+		else if (opt == 4) {
+			//cout << "print from what value: " << flush;
+			//cin << input;
+			//BST.print_from_value(input);
+		}
+	}	
+	return 0;	
+}

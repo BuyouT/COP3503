@@ -1,0 +1,11 @@
+1. graphmenu.cpp was compiled because it was the only file that had a change.
+
+2. graph.cpp was compiled this time the reason was because the change was made to its respective file.
+
+3. This time it compiled both graphmenu.cpp and graph.cpp. Even though there was no changes in graphmenu.cpp I did however make a change in graph.h since graphmenu.o depend on graphmenu.cpp and graph.h it will compile it as well.
+
+4. This time only graphmenu.cpp was compiled since the change was in the graphmenu.cpp file
+
+5. It removes graph.o and graphmenu.o
+
+6. It compiles graphmenu.cpp and graph.cpp, also recreates graphmenu.o graph.o

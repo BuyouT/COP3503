@@ -1,0 +1,90 @@
+#include "BST.h"
+#include <iostream>
+
+using namespace std;
+
+BST::BST(){
+	root = nullptr;
+}
+
+void BST::insert (int a) {	
+	if (root == nullptr){
+		root = new Node(a);
+	}
+	
+	else {
+		root -> insert(a);
+	}
+}
+
+void BST::print_inorder() {	
+	if(root == nullptr){
+        cout << "Tree empty" << endl;
+        return;
+    }
+
+    root->print_inorder();
+}
+
+bool BST::find(int b) {
+	root -> find(b);
+}
+
+void BST::print_from_value(int c) {
+	
+}
+
+////////Node implementation////////
+
+Node::Node(int s) {
+	data = s;
+	left = nullptr;
+	right = nullptr;
+}
+
+void Node::insert (int a) {
+	if(a < data) {
+		if (left == nullptr) {
+			left = new Node(a);
+		} 
+		else {
+			left->insert(a);
+		}
+	}	
+
+	else if(a > data) {
+		if(right == nullptr) {
+			right = new Node(a);
+		}
+		else {
+			right->insert(a);
+		}
+	}
+		
+}
+
+void Node::print_inorder() {
+	if (left != nullptr) {
+		left -> print_inorder();		
+	}	
+	cout << data;
+	if (right != nullptr) {
+		right -> print_inorder();
+	}   
+	cout << data;
+	cout << endl;
+}
+
+bool Node::find(int b) {
+	if (b == left || b == right) {
+		return true;
+	}
+
+	else {
+		return false;
+	}
+}
+
+void Node::print_from_value(int c) {
+	
+}

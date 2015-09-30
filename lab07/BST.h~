@@ -1,0 +1,32 @@
+#ifndef BST_H
+#define BST_H
+
+using namespace std;
+
+class Node {
+	private:
+		int data;
+		Node *left;
+		Node *right;
+
+	public:
+		Node();
+		void insert(int);
+		void print_inorder();
+		bool find(int);
+		void print_from_value(int);
+};
+
+class BST {
+	private:
+		Node *root;
+
+	public:
+		BST();
+		void insert(int);
+		void print_inorder();
+		bool find(int);
+		void print_from_value(int);
+};
+
+#endif

@@ -1,0 +1,14 @@
+all: BST
+
+BST: BST.o main.o
+	g++ -g BST.o main.o -o BST
+
+BST.o: BST.cpp BST.h
+	g++ -c -g BST.cpp
+
+main.o:main.cpp BST.h
+	g++ -c -g main.cpp
+
+clean:
+	rm -rf *.o
+	rm -rf BST
